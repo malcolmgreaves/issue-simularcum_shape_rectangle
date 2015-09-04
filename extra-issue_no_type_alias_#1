@@ -1,0 +1,16 @@
+@typeclass trait ShapeT[S] {
+
+  type N
+
+  def num: Numeric[N]
+
+  def area(s: S): N
+
+  def zero: S
+}
+
+// fails with
+/*
+not found: type N
+[error]   def area(s: S): N
+*/
